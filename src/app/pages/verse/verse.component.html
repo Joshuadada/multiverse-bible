@@ -1,0 +1,12 @@
+<div class="w-full h-screen">
+    <div class="flex h-full">
+        <div class="w-4/12 border h-full overflow-auto py-6">
+            <div class="flex flex-wrap justify-center">
+                <div *ngFor="let verse of verses" class="px-4 py-2 m-2 bg-blue-600 hover:bg-blue-500 rounded truncate text-white w-32 text-center cursor-pointer" [title] = "verse?.reference" (click)="loadVerseContent(verse?.id)">{{verse?.reference}}</div>
+            </div>
+        </div>
+        <div class="w-8/12 border p-6 text-[30px] font-semibold">
+            <div [innerHtml]="verseContent"></div>
+        </div>
+    </div>
+</div>

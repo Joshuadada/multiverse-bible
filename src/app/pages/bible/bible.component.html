@@ -1,0 +1,14 @@
+<div class="w-full p-5">
+    <div>
+        <div class="text-center text-lg text-green-500 border border-left-0 border-right-0 border-top-0 my-3 font-bold">Text Bible</div>
+        <div class="flex flex-wrap justify-center">
+            <div *ngFor="let bible of allBible" class="px-4 py-2 m-2 bg-blue-600 hover:bg-blue-500 rounded truncate text-white w-[150px] cursor-pointer" [title] = "bible.name" [routerLink]="['/bible-book', bible.id]">{{bible?.name || bible?.descriptionLocal}}</div>
+        </div>
+    </div>
+    <div class="mt-6">
+        <div class="text-center text-lg text-green-500 border border-left-0 border-right-0 border-top-0 my-3">Audio Bible</div>
+        <div class="flex flex-wrap justify-center">
+            <div *ngFor="let audioBible of allAudioBible" class="px-4 py-2 m-2 bg-blue-600 hover:bg-blue-500 rounded truncate text-white w-[150px] cursor-pointer" [title] = "audioBible.name" [routerLink]="['/bible-book', audioBible.id]">{{audioBible?.name || audioBible?.descriptionLocal}}</div>
+        </div>
+    </div>
+</div>

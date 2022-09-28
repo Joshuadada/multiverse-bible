@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.c::before {
+  content: "Chapter ";
+}
+.v {
+  font-size: 24px;
+  font-family: "Times New Roman", Times, serif;
+}
+.v::after {
+  content: ". ";
+}
+
+.v::before {
+  content: "Verse ";
+}
+
+.page-overlay-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(112, 191, 93, 0.5);
+}

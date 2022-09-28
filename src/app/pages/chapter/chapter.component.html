@@ -1,0 +1,8 @@
+<div class="w-full p-5">
+    <div>
+        <div class="text-center text-lg text-green-500 border border-left-0 border-right-0 border-top-0">Text Bible</div>
+        <div class="flex flex-wrap">
+            <div *ngFor="let chapter of chapters" class="px-4 py-2 m-2 bg-blue-600 hover:bg-blue-500 rounded truncate text-white w-32 text-center cursor-pointer" [title] = "'Chapter ' + chapter?.number" [routerLink]="['/bible-verse', bibleId, chapter?.id]">{{chapter?.number | titlecase}}</div>
+        </div>
+    </div>
+</div>
